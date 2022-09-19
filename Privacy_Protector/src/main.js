@@ -1,0 +1,38 @@
+
+function removeBanners() {
+  let divs = document.getElementsByTagName("div");
+    let ids = ["optanon", "didomi", "cookie", "privacy", "CXQnmb"];
+  let cookieWords = ["cookie", "Cookie", "Privacy Policy"];
+  let agreeWords = [
+    "accept",
+    "Accept",
+    "agree",
+    "Agree",
+    "Got it",
+    "got it",
+    "acknowledge",
+    "Acknowledge",
+    "consent",
+    "Consent",
+    "OK",
+    "Yes",
+    "Allow",
+    "allow",
+    "Sign up"
+  ];
+  for (let d of divs) {
+    if (
+      (cookieWords.some(s => d.textContent.includes(s)) &
+        agreeWords.some(s => d.textContent.includes(s)) ||
+        ids.some(s => d.id.includes(s))) &
+      !d.outerHTML.includes("<form") &
+      !d.outerHTML.includes("<input") &
+      (d.textContent.length < 2000)
+    ) {
+	console.log('Dleting:', d);
+      d.remove();
+    }
+  }
+    console.log('success');
+}
+removeBanners();

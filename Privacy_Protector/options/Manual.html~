@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Privacy Protector Manually Add CMP Page</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {
+	    background: FFFFFF;
+	    display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: top;
+            max-width: 1000px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+            line-height: 1.25em;
+	    align-items: center;
+	    padding-bottom: 10px;
+       
+      }
+     
+      .logo {
+        width: 100px;
+        margin: 5px;
+	margin: 0 auto; display: block; 
+      }
+      
+      .header{
+	  align-items: center;
+      }
+
+      .socials{
+	border-top: 0.5px solid #C0C0C0;
+      }
+
+       
+    </style>
+   
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="../icons/logo_128.png">
+      <h1>Manually Add CMPs:</h1>
+    </div>
+     <div class="menu">
+      <button id="consentPreferences">Set Consent Preferences</button>
+      <button id="ManualAddCMP">Manually Add CMPS JSON file</button>
+      <button id="AutoScanCMP">Automatically Scan for CMPS</button>
+      <button id="aboutus">About us</button>
+    </div>
+     <div class="socials">
+    <a  class="logo" href="https://github.com/PetrosKavazis/MSc-Dissertation" target="_blank"><i class="fa fa-github" style="font-size:48px;color:red"></i></a>
+   </div>
+   <script src="Manual.js"></script>
+  </body>
+</html>

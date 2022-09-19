@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "PrivacyProtector",
+    "description": "Protect your privacy by blocking cookies",
+    "version": "1.0",
+    "icons":{
+	"16":"icons/logo_16.png",
+	"48":"icons/logo_48.png",
+	"128":"icons/logo_128.png"
+    },
+  "browser_action": {
+    "default_icon": "icons/logo_16.png",
+    "default_popup": "popup.html"
+  },
+    "permissions": [
+	"activeTab",
+	"storage",
+	"cookies",
+	"https://*/*",
+	"http://*/*",
+	"scripting"
+    ], 
+    "background": {
+	 "matches": ["*"],
+    "scripts": ["background.js"]
+  }
+  
+  
+   
+    
+}
